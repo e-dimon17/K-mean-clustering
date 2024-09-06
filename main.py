@@ -45,3 +45,8 @@ import matplotlib.pyplot as plt
 # Pairplot to visualize clusters
 sns.pairplot(data, hue='Cluster', diag_kind='kde')
 plt.show()
+
+import joblib
+
+# Save the K-Means model
+joblib.dump(kmeans, 'kmeans_wine_model.pkl')
