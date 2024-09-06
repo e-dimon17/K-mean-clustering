@@ -47,3 +47,15 @@ def predict_wine_cluster(data: WineData):
     prediction = model.predict(input_data_scaled_df)
     print(f"Prediction: {int(prediction[0])}")
     return {'prediction': int(prediction[0])}
+
+import uvicorn
+import nest_asyncio
+from pyngrok import ngrok
+
+# Apply the nest_asyncio patch
+nest_asyncio.apply()
+
+public_url = ngrok.connect(9002, "http")
+print('Public URL:', public_url)
+
+uvicorn.run(app, host='0.0.0.0', port=9002)
