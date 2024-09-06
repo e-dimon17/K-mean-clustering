@@ -17,3 +17,12 @@ data = pd.read_csv('wine-clustering.csv')
 # Display basic information about the dataset
 data.info()
 data.describe()
+
+from sklearn.preprocessing import StandardScaler
+
+# Standardize the features
+scaler = StandardScaler()
+data_scaled = pd.DataFrame(scaler.fit_transform(data), columns=data.columns)
+data_scaled.info()
+data_scaled.describe()
+data_scaled.head()
