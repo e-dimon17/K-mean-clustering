@@ -38,3 +38,10 @@ kmeans.fit(data_scaled)
 # Get the cluster labels
 data['Cluster'] = kmeans.labels_
 print(data)
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Pairplot to visualize clusters
+sns.pairplot(data, hue='Cluster', diag_kind='kde')
+plt.show()
