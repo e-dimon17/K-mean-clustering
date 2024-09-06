@@ -26,3 +26,15 @@ data_scaled = pd.DataFrame(scaler.fit_transform(data), columns=data.columns)
 data_scaled.info()
 data_scaled.describe()
 data_scaled.head()
+
+from sklearn.cluster import KMeans
+
+# Define the K-Means model
+kmeans = KMeans(n_clusters=3, n_init=10, random_state=42)
+
+# Fit the model to the data
+kmeans.fit(data_scaled)
+
+# Get the cluster labels
+data['Cluster'] = kmeans.labels_
+print(data)
