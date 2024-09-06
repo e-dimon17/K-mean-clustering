@@ -1,6 +1,3 @@
-Here’s a README file tailored for your K-mean clustering project based on the provided `main.py` and `run_model.py` files.
-
-```markdown
 # K-Mean Clustering
 
 This project demonstrates the use of the K-Means clustering algorithm on the Wine dataset. It includes model training, evaluation, and deployment using FastAPI.
@@ -131,6 +128,3 @@ The `run_model.py` script uses FastAPI to serve predictions based on the trained
 ```
 
 The response will provide the predicted cluster for the given data.
-```
-
-Feel free to adjust any sections or details as needed!
